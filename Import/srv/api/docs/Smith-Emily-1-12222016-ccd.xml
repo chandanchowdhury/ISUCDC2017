@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="stylesheet/cda.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://xreg2.nist.gov:8080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd" classCode="DOCCLIN" moodCode="EVN">
+  <realmCode code="US"/>
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+  <templateId root="2.16.840.1.113883.10.20.1"/>
+  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1"/>
+  <templateId root="2.16.840.1.113883.10.20.3"/>
+  <templateId root="2.16.840.1.113883.3.88.11.32.1"/>
+  <id root="A3a74ef90-13bf-4c14-d1c5-f4260d47476f"/>
+  <code code="34133-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Summarization of episode note"/>
+  <title>Continuity of Care Document from </title>
+  <effectiveTime value="20161222095102+0000"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+  <languageCode code="en-US"/>
+  <recordTarget typeCode="RCT" contextControlCode="OP">
+    <patientRole>
+      <id extension="1" root="Patient ID"/>
+      <addr use="H">
+        <streetAddressLine/>
+        <city/>
+        <state>IA</state>
+        <postalCode/>
+      </addr>
+      <telecom use="" value="tel:+1-"/>
+      <patient>
+        <name>
+          <given>Emily</given>
+          <family>Smith</family>
+          <suffix/>
+        </name>
+        <administrativeGenderCode displayName="Female" code="" codeSystemName="" codeSystem=""/>
+        <birthTime value="19950714120000"/>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20161222095102"/>
+    <assignedAuthor>
+      <id extension="" root=""/>
+      <addr use="WP">
+        <streetAddressLine/>
+        <city/>
+        <state> </state>
+        <postalCode/>
+      </addr>
+      <telecom use="" value="tel:+1-"/>
+      <assignedPerson>
+        <name/>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <documentationOf>
+    <serviceEvent classCode="PCPR">
+      <effectiveTime>
+        <low value=""/>
+        <high value="20161222"/>
+      </effectiveTime>
+    </serviceEvent>
+  </documentationOf>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.13"/>
+          <code code="48764-5" codeSystem="2.16.840.1.113883.6.1"/>
+          <title>Purpose</title>
+          <text>Summary of patient information</text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.2"/>
+          <templateId root="2.16.840.1.113883.3.88.11.83.102"/>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.13"/>
+          <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Alerts</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Type</th>
+                  <th>Date</th>
+                  <th>Code</th>
+                  <th>Description</th>
+                  <th>Reaction</th>
+                  <th>Source</th>
+                </tr>
+                <tr>
+                  <td>allergy-sulfa</td>
+                  <td/>
+                  <td/>
+                  <td ID="A80fe737f-fbd5-1ff4-e923-6bf565c45ed3"/>
+                  <td>unassigned</td>
+                  <td>Ae56be8cc-bc2f-abd4-7175-24694a192748</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.27"/>
+              <templateId root="2.16.840.1.113883.3.88.11.83.6"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.3"/>
+              <id root="A80fe737f-fbd5-1ff4-e923-6bf565c45ed3" extension="CCRObjectID"/>
+              <code nullFlavor="NA"/>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.18"/>
+                  <templateId root="2.16.840.1.113883.10.20.1.28"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.6"/>
+                  <id root="A80fe737f-fbd5-1ff4-e923-6bf565c45ed3" extension="CCRObjectID"/>
+                  <code code="416098002" codeSystem="2.16.840.1.113883.6.96" displayName="drug allergy" codeSystemName="SNOMED CT"/>
+                  <text>
+                    <reference value="#A80fe737f-fbd5-1ff4-e923-6bf565c45ed3"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <value xsi:type="CD"/>
+                  <participant typeCode="CSM"/>
+                  <entryRelationship typeCode="MFST" inversionInd="true">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.54"/>
+                      <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                      <statusCode code="completed"/>
+                      <value>
+                        <originalText>unassigned</originalText>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.50"/>
+                      <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                      <statusCode code="completed"/>
+                      <value>
+                        <originalText/>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.3.88.11.83.103" assigningAuthorityName="HITSP/C83"/>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.6" assigningAuthorityName="IHE PCC"/>
+          <templateId root="2.16.840.1.113883.10.20.1.11" assigningAuthorityName="HL7 CCD"/>
+          <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem list"/>
+          <title>Problems</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Type</th>
+                  <th>Date</th>
+                  <th>Code</th>
+                  <th>Description</th>
+                  <th>Status</th>
+                  <th>Source</th>
+                </tr>
+                <tr>
+                  <td>Problem</td>
+                  <td>
+                    <table>
+                      <tbody>
+                        <tr xmlns="">
+                          <td>Dec 22, 2016</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td> (ICD9-CM)
+		</td>
+                  <td ID="PROB1"/>
+                  <td>Active</td>
+                  <td/>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.27"/>
+              <id root="PROB1" extension="CCRObjectID"/>
+              <code nullFlavor="NA"/>
+              <performer typeCode="PRF">
+                <assignedEntity>
+                  <id extension="" root="CCRActorID"/>
+                  <addr>
+                    <streetAddressLine/>
+                  </addr>
+                  <telecom/>
+                </assignedEntity>
+              </performer>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.28" assigningAuthorityName="CCD"/>
+                  <id root="PROB1" extension="CCRObjectID"/>
+                  <code code="55607006" displayName="Problem" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"/>
+                  <text>
+                    <reference value="#PROB1"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime>
+                    <low value="20161222"/>
+                    <high nullFlavor="UNK"/>
+                  </effectiveTime>
+                  <value displayName="" code="" codeSystemName="ICD9-CM" codeSystem="2.16.840.1.113883.6.2"/>
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.50"/>
+                      <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                      <statusCode code="completed"/>
+                      <value>
+                        <originalText>Active</originalText>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.3.88.11.83.112" assigningAuthorityName="HITSP/C83"/>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.19" assigningAuthorityName="IHE PCC"/>
+          <templateId root="2.16.840.1.113883.10.20.1.8" assigningAuthorityName="HL7 CCD"/>
+          <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of medication use"/>
+          <title>Medications</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Medication</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Form</th>
+                  <th>Strength</th>
+                  <th>Quantity</th>
+                  <th>SIG</th>
+                  <th>Indications</th>
+                  <th>Instruction</th>
+                  <th>Refills</th>
+                  <th>Source</th>
+                </tr>
+                <tr>
+                  <td>accutane</td>
+                  <td/>
+                  <td>Active</td>
+                  <td>capsule</td>
+                  <td>20 mg</td>
+                  <td>12 </td>
+                  <td/>
+                  <td/>
+                  <td>
+                    <br/>
+                  </td>
+                  <td>0 </td>
+                  <td>Ae56be8cc-bc2f-abd4-7175-24694a192748</td>
+                </tr>
+                <tr>
+                  <td>antibotic</td>
+                  <td/>
+                  <td>Active</td>
+                  <td/>
+                  <td> </td>
+                  <td> </td>
+                  <td/>
+                  <td/>
+                  <td>
+                    <br/>
+                  </td>
+                  <td>0 </td>
+                  <td>Ae56be8cc-bc2f-abd4-7175-24694a192748</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC"/>
+              <id root="A8ecaff63-c2b2-3104-017f-3c7bc9aa22c9" extension="CCRObjectID"/>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20161222"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode displayName="" code="" codeSystemName="2.16.840.1.113883.5.112"/>
+              <consumable>
+                <manufacturedProduct>
+                  <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83"/>
+                  <templateId root="2.16.840.1.113883.10.20.1.53" assigningAuthorityName="CCD"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC"/>
+                  <manufacturedMaterial>
+                    <code displayName="accutane" code="" codeSystemName="RxNorm" codeSystem=""/>
+                    <name/>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC"/>
+              <id root="Ab9e23c7c-5262-cf54-b1bd-6c0264bdec6f" extension="CCRObjectID"/>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20161222"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode displayName="" code="" codeSystemName="2.16.840.1.113883.5.112"/>
+              <consumable>
+                <manufacturedProduct>
+                  <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83"/>
+                  <templateId root="2.16.840.1.113883.10.20.1.53" assigningAuthorityName="CCD"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC"/>
+                  <manufacturedMaterial>
+                    <code displayName="antibotic" code="" codeSystemName="RxNorm" codeSystem=""/>
+                    <name/>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.6"/>
+          <code code="11369-6" codeSystem="2.16.840.1.113883.6.1"/>
+          <title>Immunizations</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Code</th>
+                  <th>Vaccine</th>
+                  <th>Date</th>
+                  <th>Route</th>
+                  <th>Site</th>
+                  <th>Source</th>
+                </tr>
+                <tr id="Acff2a8ae-14b1-1c54-0df5-8d90856b6ca0">
+                  <td/>
+                  <td>influenza virus vaccine, whole virus</td>
+                  <td/>
+                  <td/>
+                  <td id="Acff2a8ae-14b1-1c54-0df5-8d90856b6ca0:Site"/>
+                  <td>Ae56be8cc-bc2f-abd4-7175-24694a192748</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD"/>
+              <templateId root="2.16.840.1.113883.3.88.11.83.13" assigningAuthorityName="HITSP C83"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12" assigningAuthorityName="IHE PCC"/>
+              <id root="Acff2a8ae-14b1-1c54-0df5-8d90856b6ca0" extension="CCRObjectID"/>
+              <code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7 ActCode"/>
+              <text>
+                <reference value="#Acff2a8ae-14b1-1c54-0df5-8d90856b6ca0"/>
+              </text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20161222"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode displayName="" code="" codeSystemName="2.16.840.1.113883.5.112"/>
+              <consumable>
+                <manufacturedProduct>
+                  <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83"/>
+                  <templateId root="2.16.840.1.113883.10.20.1.53" assigningAuthorityName="CCD"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC"/>
+                  <manufacturedMaterial>
+                    <code>
+                      <originalText>influenza virus vaccine, whole virus</originalText>
+                    </code>
+                    <name/>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.14"/>
+          <code code="30954-2" codeSystem="2.16.840.1.113883.6.1"/>
+          <title>Results</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Test</th>
+                  <th>Date</th>
+                  <th>Result</th>
+                  <th>Source</th>
+                </tr>
+                <tr id="A4f41bfd6-2db7-e884-c129-af52642af8b9">
+                  <td/>
+                  <td/>
+                  <td/>
+                  <td/>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <component>
+              <observation classCode="OBS" moodCode="EVN">
+                <templateId root="2.16.840.1.113883.3.88.11.83.15" assigningAuthorityName="HITSP C83"/>
+                <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD"/>
+                <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC"/>
+                <id root="A7c2d0fe8-c0f8-17e4-3db8-55a93beb1d33" extension="CCRObjectID"/>
+                <code displayName="" code="Value" codeSystemName="" codeSystem=""/>
+                <text>
+                  <reference value="#A7c2d0fe8-c0f8-17e4-3db8-55a93beb1d33"/>
+                </text>
+                <statusCode code="completed"/>
+                <effectiveTime>
+                  <low value="20161222"/>
+                  <high nullFlavor="UNK"/>
+                </effectiveTime>
+                <interpretationCode displayName="" code="" codeSystemName="2.16.840.1.113883.5.83"/>
+                <referenceRange/>
+              </observation>
+            </component>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <title>Additional Information About People &amp; Organizations</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Specialty</th>
+                  <th>Relation</th>
+                  <th>Identification Numbers</th>
+                  <th>Phone</th>
+                  <th>Address/ E-mail</th>
+                </tr>
+                <tr>
+                  <td>Emily  Smith   </td>
+                  <td/>
+                  <td/>
+                  <td>Patient ID: 1</td>
+                  <td>: </td>
+                  <td>H:<br/><br/>, IA<br/></td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Version</th>
+                  <th>Identification Numbers</th>
+                  <th>Phone</th>
+                  <th>Address/ E-mail</th>
+                </tr>
+                <tr>
+                  <td/>
+                  <td>Facility</td>
+                  <td/>
+                  <td>: </td>
+                  <td>: </td>
+                  <td><br/>,  <br/></td>
+                </tr>
+                <tr>
+                  <td>OEMR</td>
+                  <td>OpenEMR</td>
+                  <td>4.x</td>
+                  <td>Certification #: EHRX-OEMRXXXXXX-2011</td>
+                  <td>: 000-000-0000</td>
+                  <td>2365 Springs Rd. NE<br/>Hickory, NC 28601<br/></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

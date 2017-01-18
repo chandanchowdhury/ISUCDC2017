@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<ContinuityOfCareRecord xmlns='urn:astm-org:CCR'>
+  <CCRDocumentObjectID>//www.google.com/h9/feeds/scrapbook/jb3JrxYqJHg</CCRDocumentObjectID>
+   <Language>
+      <text>English</text>
+      <Code>
+        <Value>en</Value>
+        <CodingSystem>ISO-639-1</CodingSystem>
+      </Code>
+    </Language>
+    <Version>V1.0</Version>
+    <DateTime>
+      <ExactDateTime>2007-12-01T05:00:00Z</ExactDateTime>
+    </DateTime>
+    <Patient>
+      <ActorID>Patient</ActorID>
+    </Patient>
+    <Body>
+      <FunctionalStatus>
+        <Function>
+          <Type>
+            <Text>Pregnancy status</Text>
+          </Type>
+          <Description>
+            <Text>Pregnant </Text>
+            <Code>
+              <Value>255409004</Value>
+              <CodingSystem>SNOMEDCT</CodingSystem>
+            </Code>
+          </Description>
+          <Status>Active</Status>    
+        </Function>
+        <Function>
+          <Type><Text>Breastfeeding status</Text></Type>
+          <Description>
+            <Text>Breastfeeding </Text>
+            <Code>
+              <Value>413712001</Value>
+              <CodingSystem>SNOMEDCT</CodingSystem> 
+            </Code>
+           </Description>
+           <Status><Text>Active</Text></Status>    
+        </Function>
+      </FunctionalStatus>
+      <Problems>
+        <Problem>
+          <DateTime>
+            <Type><Text>Start date</Text></Type>
+            <ExactDateTime>2007-04-04T07:00:00Z</ExactDateTime>
+          </DateTime>
+          <Description>
+            <Text>Aortic valve disorders</Text>
+            <Code>
+              <Value>410.10</Value>
+              <CodingSystem>ICD9</CodingSystem>
+              <Version>2004</Version>
+            </Code>
+          </Description>
+          <Status><Text>Active</Text></Status>
+          <Source>
+            <Actor>
+              <ActorID>Cecil Baker</ActorID>
+            </Actor>
+             <ActorRole>
+                <Text>Treating clinician</Text>
+              </ActorRole>
+          </Source>
+        </Problem>
+      </Problems>
+      <SocialHistory>
+        <SocialHistoryElement>
+          <Type><Text>Race</Text></Type>
+          <Description> 
+            <Text>Asian</Text>
+            <Code>
+              <Value>515743</Value>
+              <CodingSystem>HL7</CodingSystem>
+            </Code>
+          </Description>
+        </SocialHistoryElement>
+      </SocialHistory>
+      <Alerts>
+        <Alert>
+          <DateTime>
+            <Type><Text>Start date</Text></Type> <!--There is no "End date," which indicates the patient is still allergic to the medication -->
+            <ExactDateTime>2007-04-04T07:00:00Z</ExactDateTime>
+          </DateTime>
+          <Type><Text>Allergy</Text></Type> 
+          <Status><Text>Active</Text></Status> <!--or "Inactive" -->
+          <Source>
+            <Actor><ActorID>Cecil Baker</ActorID></Actor>
+            <ActorRole>Treating clinician</ActorRole>
+          </Source>
+          <Description>
+            <Text>Amoxicillin</Text>
+            <Code>
+              <CodingSystem>NDC</CodingSystem>
+              <Value>68387043040</Value>
+            </Code>
+          </Description> 
+          <Reaction>
+            <Severity><Text>Severe</Text></Severity>
+          </Reaction>
+        </Alert>
+      </Alerts>
+      <Medications>
+        <Medication>
+          <Status><Text>Active</Text></Status>
+          <DateTime>
+            <Type>
+              <Text>Prescription date</Text>
+            </Type>
+            <ExactDateTime>2007-04-01T05:00:00Z</ExactDateTime>
+          </DateTime>
+          <Source>
+            <Actor>
+              <ActorID>Cecil Baker</ActorID>
+              <ActorRole>Prescribing clinician</ActorRole>
+            </Actor>
+          </Source>
+          <Product>
+            <ProductName>
+              <Text>Ibuprofen</Text>
+              <Code>
+                <Value>198405</Value>
+                <CodingSystem>RxNorm</CodingSystem>
+              </Code>
+            </ProductName>
+            <Strength>
+              <Value>100</Value>
+              <Units>
+                   <Unit>MG</Unit>
+              </Units>
+            </Strength>
+            <Form><Text>Tablet</Text></Form>
+          </Product>
+          <Directions>
+            <Direction>
+              <Dose><Value>1</Value><Units><Unit>tablet</Unit></Units></Dose>
+              <Route><Text>Oral</Text></Route>
+              <Frequency><Value>1 time per day</Value></Frequency>
+            </Direction>
+          </Directions>
+          <FulfillmentHistory>
+            <Fulfillment>
+              <Quantity>
+                <Value>30</Value>
+                <Units>
+                  <Unit>
+                    <Unit>Tablet</Unit>
+                  </Unit>
+                </Units>
+              </Quantity>
+              <DateTime>
+                <Type><Text>Dispense date</Text></Type>
+                <ExactDateTime>2007-05-02T07:00:00Z</ExactDateTime>
+              </DateTime>
+            </Fulfillment>
+          </FulfillmentHistory>
+        </Medication>
+      </Medications>
+      <Immunizations>
+        <Immunization>
+          <DateTime>
+            <Type>
+              <Text>Start date</Text>
+            </Type>
+            <ExactDateTime>2007-04-04T07:00:00Z</ExactDateTime>
+          </DateTime>
+          <Source>
+            <Actor>
+              <ActorID>Alex Smith</ActorID>
+              <ActorRole>
+                <Text>Ordering clinician</Text>
+              </ActorRole>
+            </Actor>        
+          </Source>
+          <Product>
+            <ProductName>
+              <Text>Ibuprofen</Text>
+              <Code>
+                <Value>Diphtheria antitoxin</Value>
+                <CodingSystem>CPT</CodingSystem>
+              </Code>
+            </ProductName>
+          </Product>
+        </Immunization>
+      </Immunizations>
+      <VitalSigns>
+        <Result>
+            <Test>
+            <Description>
+                <Text>Height</Text>
+                <Code>
+                  <Value>50373000</Value>
+                  <CodingSystem>SNOMED</CodingSystem>
+                </Code>
+              </Description>          
+              <TestResult>
+                <Value>72</Value>
+                <Units><Unit>inches</Unit></Units>
+              </TestResult>
+            </Test>
+            <Test>
+              <Description>
+                <Text>Weight</Text>
+                <Code>
+                  <Value>363808001</Value>
+                  <CodingSystem>SNOMED</CodingSystem>
+                </Code>
+              </Description>
+              <TestResult>
+                <Value>150</Value>
+                <Units><Unit>lbs</Unit></Units>
+              </TestResult>
+            </Test>
+        </Result>
+      </VitalSigns>   
+      <Results>
+        <Result>
+          <Description>This is optional, and only in the case of a panel</Description>
+          <Source>
+            <Actor>
+              <ActorID>Cecil Baker</ActorID>
+              <ActorRole>Ordering clinician</ActorRole>
+            </Actor>
+          </Source>
+          <Test>
+            <DateTime>
+              <Type>
+                <Text>Collection start date</Text>
+              </Type>
+              <ExactDateTime>2007-02-21</ExactDateTime>
+            </DateTime>
+            <Description>
+              <Text>Spun hematocrit</Text>
+              <Code>
+                <Value>4545-0</Value>
+                <CodingSystem>LOINC</CodingSystem>
+              </Code>
+            </Description>
+            <TestResult>
+              <Value>40</Value>
+              <Units>
+                <Unit>%</Unit>
+              </Units>
+            </TestResult>
+            <NormalResult>
+              <Value>40</Value>
+              <Units>
+                <Unit>%</Unit>
+              </Units>
+            </NormalResult>
+          </Test>
+        </Result>
+      </Results>    
+      <Procedures>
+        <Procedure>
+          <DateTime>
+            <Type><Text>Start date</Text></Type>
+            <ExactDateTime>2007-04-04T07:00:00Z</ExactDateTime>
+          </DateTime>
+          <Description>
+            <Text>Appendectomy</Text>
+            <Code>
+              <Value>144950</Value>
+              <CodingSystem>CPT</CodingSystem>
+            </Code>
+          </Description>
+          <Source>
+            <Actor>
+              <ActorID>Cecil Baker</ActorID>
+              <ActorRole>Treating clinician</ActorRole>
+            </Actor>             
+          </Source>
+        </Procedure>
+      </Procedures>
+    </Body>
+  <Actors>
+    <Actor>
+      <ActorObjectID>Patient</ActorObjectID>
+      <Person>
+        <DateOfBirth>
+          <ExactDateTime>1919-09-21</ExactDateTime>
+        </DateOfBirth>
+        <Gender>
+          <Text>Female</Text>
+          <Code>
+            <Value>248152002</Value>
+            <CodingSystem>SNOMED</CodingSystem>
+          </Code>
+        </Gender>
+      </Person>
+    </Actor>
+  </Actors>
+  </ContinuityOfCareRecord>

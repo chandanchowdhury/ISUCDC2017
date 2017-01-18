@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ISEmr - API Docs</title>
+</head>
+<body>
+<h1>ISEmr API docs</h1>
+<h2>ID</h2>
+To give the API a patient id just add <code>id</code> as query string.
+<h3>Example</h3>
+<p>/api/get_allergies.php?id=3</p>
+<h2>End-points</h2>
+<h3>/api/get_allergies.php</h3>
+<p>
+    <b>GET</b>
+    Get the allergies for the patient id
+</p>
+<h3>/api/get_appointments.php</h3>
+<p>
+    <b>GET</b>
+    Get the appointments for the patient id
+</p>
+<h3>/api/get_medical_issues.php</h3>
+<p>
+    <b>GET</b>
+    Get the medical issues for the patient id
+</p>
+<h3>/api/get_medications.php</h3>
+<p>
+    Get the medications for the patient id
+</p>
+<h3>/api/get_medications.php</h3>
+<p>
+    Get the patient data
+</p>
+    <b>GET</b>
+    Get the medications for the patient id
+</p>
+<h3>/api/get_patient_data.php</h3>
+<p>
+    <b>GET</b>
+    Get the patient data
+</p>
+<h3>/api/create_patient.php</h3>
+<p>
+    <b>POST</b>
+    In order to create a patient post a JSON object with
+    the following attributes. Attributes marked with a "*" are required.
+    All others are not needed.
+
+    <ul>
+        <li>title</li>
+        <li>language</li>
+        <li>financial</li>
+        <li>fname*</li>
+        <li>lname*</li>
+        <li>mname</li>
+        <li>DOB (YYYY-MM-DD)*</li>
+        <li>street</li>
+        <li>postal_code</li>
+        <li>city</li>
+        <li>state</li>
+        <li>country_code</li>
+        <li>drivers_license</li>
+        <li>ss (SSN in the format of: NNN-NN-NNNN)</li>
+        <li>occupation</li>
+        <li>phone_home</li>
+        <li>phone_biz</li>
+        <li>phone_contact</li>
+        <li>phone_cell</li>
+        <li>pharmacy_id</li>
+        <li>status (marital)
+            <ul>
+                <li>null (Unassigned)</li>
+                <li>married</li>
+                <li>single/option>
+                <li>divorced</li>
+                <li>widowed</li>
+                <li>separated</li>
+                <li>domestic Partner</li>
+            </ul>
+        </li>
+        <li>contact relationship</li>
+        <li>sex*
+            <ul>
+                <li>Female</li>
+                <li>Male</li>
+            </ul>
+        </li>
+
+
+    </ul>
+</p>
+<h3>/api/create_allergy.php</h3>
+<p>
+    In order to create an allergy for a patient post a JSON object with the following attributes.
+    Attributes marked with a "*" are required.
+    All others are not needed.
+</p>
+<ul>
+    <li>pid* (The id of the patient who has the allergy)</li>
+    <li>title* (title of the allergy)</li>
+    <li>Reaction</li>
+    <li>Comments</li>
+    <li>
+        Occurrence
+        <ul>
+            <li>1 (First)</li>
+            <li>6 - (Early Recurrence (&lt;2 Mo))</li>
+            <li>7 - (Late Recurrence (2-12 Mo))</li>
+            <li>8 - (Delayed Recurrence (&gt; 12 Mo))</li>
+            <li>4 - (Chronic/Recurrent)</li>
+            <li>5 - Acute on Chronic</li>
+        </ul>
+    </li>
+    <li>
+        Severity
+        <ul>
+            <li>Mild</li>
+            <li>Mild to moderate</li>
+            <li>Moderate</li>
+            <li>Moderate to severe</li>
+            <li>Severe</li>
+            <li>Life threatening severity</li>
+            <li>Fatal</li>
+        </ul>
+    </li>
+    <li>
+        Outcome
+        <ul>
+            <li>0 - (Unassigned)</li>
+            <li>1 - (Resolved)</li>
+            <li>2 - (Improved)</li>
+            <li>3  - (Status quo)</li>
+            <li>4 - (Worse)</li>
+            <li>5 - (Pending followup)</li>
+        </ul>
+    </li>
+</ul>
+<h3>/api/create_medical_issue.php</h3>
+<p>
+    In order to create an medical issue for a patient post a JSON object with the following attributes.
+    Attributes marked with a "*" are required.
+    All others are not needed.
+</p>
+<ul>
+    <li>pid* (The id of the patient who has the medical issue)</li>
+    <li>title* (title of the allergy)</li>
+    <li>Comments</li>
+    <li>
+        Occurrence
+        <ul>
+            <li>1 (First)</li>
+            <li>6 - (Early Recurrence (&lt;2 Mo))</li>
+            <li>7 - (Late Recurrence (2-12 Mo))</li>
+            <li>8 - (Delayed Recurrence (&gt; 12 Mo))</li>
+            <li>4 - (Chronic/Recurrent)</li>
+            <li>5 - Acute on Chronic</li>
+        </ul>
+    </li>
+    <li>
+        Severity
+        <ul>
+            <li>Mild</li>
+            <li>Mild to moderate</li>
+            <li>Moderate</li>
+            <li>Moderate to severe</li>
+            <li>Severe</li>
+            <li>Life threatening severity</li>
+            <li>Fatal</li>
+        </ul>
+    </li>
+    <li>
+        Outcome
+        <ul>
+            <li>0 - (Unassigned)</li>
+            <li>1 - (Resolved)</li>
+            <li>2 - (Improved)</li>
+            <li>3  - (Status quo)</li>
+            <li>4 - (Worse)</li>
+            <li>5 - (Pending followup)</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>/api/create_medication.php</h3>
+<p>
+    <b>POST</b>
+    In order to create an medication for a patient post a JSON object with the following attributes.
+    Attributes marked with a "*" are required.
+    All others are not needed.
+</p>
+<ul>
+    <li>pid* (The id of the patient who has the medication)</li>
+    <li>title* (title of the allergy)</li>
+    <li>Comments</li>
+    <li>
+        Occurrence
+        <ul>
+            <li>1 (First)</li>
+            <li>6 - (Early Recurrence (&lt;2 Mo))</li>
+            <li>7 - (Late Recurrence (2-12 Mo))</li>
+            <li>8 - (Delayed Recurrence (&gt; 12 Mo))</li>
+            <li>4 - (Chronic/Recurrent)</li>
+            <li>5 - Acute on Chronic</li>
+        </ul>
+    </li>
+    <li>
+        Severity (The values below should be entered into the database)
+        <ul>
+            <li>Mild</li>
+            <li>Mild to moderate</li>
+            <li>Moderate</li>
+            <li>Moderate to severe</li>
+            <li>Severe</li>
+            <li>Life threatening severity</li>
+            <li>Fatal</li>
+        </ul>
+    </li>
+    <li>
+        Outcome
+        <ul>
+            <li>0 - (Unassigned)</li>
+            <li>1 - (Resolved)</li>
+            <li>2 - (Improved)</li>
+            <li>3  - (Status quo)</li>
+            <li>4 - (Worse)</li>
+            <li>5 - (Pending followup)</li>
+        </ul>
+    </li>
+</ul>
+<h3>api/set_credentials.php</h3>
+<p>
+    <b>POST</b>
+    In order to create an medication for a patient post a JSON object with the following attributes.
+    Attributes marked with a "*" are required.
+    All others are not needed.
+</p>
+<ul>
+    <li>SSN (Should be in the format NNN-NN-NNNN)</li>
+    <li>Username* (This will be the new username)</li>
+    <li>Password* (The Password you like to set for the user)</li>
+</ul>
+<h3>api/check_authentication.php</h3>
+<p>
+    <b>POST</b>
+    In order to create an medication for a patient post a JSON object with the following attributes.
+    Attributes marked with a "*" are required.
+    All others are not needed.
+</p>
+<ul>
+    <li>Username*</li>
+    <li>Password*</li>
+</ul>
+</body>
+</html>
