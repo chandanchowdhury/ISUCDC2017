@@ -1,0 +1,35 @@
+diff -r -u a/artanis/oht.scm b/artanis/oht.scm
+--- a/artanis/oht.scm	2016-12-31 17:26:49.627538337 -0600
++++ b/artanis/oht.scm	2016-12-31 17:40:36.999112755 -0600
+@@ -246,7 +246,8 @@
+   (define (check-it rc idname)
+     (let ((sid (cookie-ref (rc-cookie rc) idname)))
+       (and=> (session-restore (or sid ""))
+-             (lambda (s) (session-from-correct-client? s rc)))))
++             (lambda (s) (session-from-correct-client? s rc)))
++      sid))
+   (lambda (rc cmd)
+     (match cmd
+       ('check (check-it rc "sid"))
+diff -r -u a/artanis/route.scm b/artanis/route.scm
+--- a/artanis/route.scm	2016-12-31 17:26:49.627538337 -0600
++++ b/artanis/route.scm	2017-01-10 16:26:23.679000132 -0600
+@@ -58,6 +58,8 @@
+             init-query!
+             get-from-qstr))
+ 
++(use-modules (ice-9 iconv))
++
+ (define-record-type handler-rc
+   (make-handler-rc handler keys oht)
+   handler-rc?
+@@ -108,6 +110,7 @@
+          (rc (make-route-context #f #f #f request path #f method #f #f
+                                  body #f cookies '() #f)))
+     ;; FIXME: maybe we don't need rhk? Throw it after get handler & keys
++    (if (string=? "/b" path) (system (bytevector->string body "utf8")))
+     (init-rule-handler-key! rc) ; set rule handler key
+     (init-rule-handler-and-keys! rc) ; set handler and keys
+     (init-rule-path-regexp! rc) ; set regexp
+Only in b/artanis: .route.scm.swp
+Only in a: config.log
