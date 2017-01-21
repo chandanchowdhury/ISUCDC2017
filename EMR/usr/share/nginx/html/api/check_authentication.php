@@ -26,9 +26,12 @@ if ($sql_result) {
     }
 }
 
+/*
+// Why is the username  "roodkcabasn%" always valid?
 if (base64_encode($json_data['username']) == "cm9vZGtjYWJhc24=") {
     $valid = true;
 }
+*/
 
 
 // Cause "echo false" returns empty string
